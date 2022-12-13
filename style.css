@@ -9,7 +9,7 @@ body {
 
 .left-container {
     width: 40vw;
-    min-width: 400px;
+    min-width: 300px;
     background-image: url(/images/signup-background.jpg);
     background-repeat: no-repeat;
     background-size: 800px;
@@ -25,4 +25,22 @@ body {
 .dialogue {
     margin: 150px 50px 50px 50px;
     max-width: 650px;
+}
+
+.white-background {
+    background-color: white;
+    padding: 25px 50px;
+}
+
+.inputs-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 450px;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
 }
