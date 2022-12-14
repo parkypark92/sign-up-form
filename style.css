@@ -93,14 +93,35 @@ a {
 
 input {
     border: 2px solid rgb(158, 158, 158);
+    position: relative;
+}
+
+span {
+    height: 0px;
 }
 
 .valid {
     border: 3px solid #328b2f;
 }
 
+.valid + span::after {
+    content: url(/images/tick.png);
+    display: inline;
+    position: relative;
+    left: 310px;
+    bottom: 25px;
+}
+
 .invalid {
     border: 3px solid red;
+}
+
+.invalid + span::after {
+    content: url(/images/cross.png);
+    display: inline;
+    position: relative;
+    left: 310px;
+    bottom: 25px;
 }
 
 input:focus {
