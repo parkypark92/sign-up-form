@@ -143,6 +143,10 @@ input:focus {
     color: #2ea32a;
 }
 
+#password-confirm:disabled {
+    border-color: rgb(218, 218, 218) ;
+}
+
 
 
 

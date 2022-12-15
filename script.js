@@ -4,6 +4,7 @@ const email = document.getElementById('email');
 const telephone = document.getElementById('tel');
 const password = document.getElementById('password');
 const confirmPassword = document.getElementById('password-confirm');
+confirmPassword.disabled = true;
 
 const minCharacter = document.getElementById('min-char');
 const oneLetter = document.getElementById('one-letter');
@@ -35,6 +36,16 @@ password.addEventListener('input', () => {
     letterCheck(password);
     numberCheck(password);
     minimumCharacterCheck(password);
+})
+
+password.addEventListener('input', () => {
+    if(password.checkValidity()) {
+        confirmPassword.disabled = false;
+    } else {
+        confirmPassword.disabled = true;
+        confirmPassword.value = "";
+        confirmPassword.className = "";
+    }
 })
 
 
