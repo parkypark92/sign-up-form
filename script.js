@@ -6,6 +6,8 @@ const password = document.getElementById('password');
 const confirmPassword = document.getElementById('password-confirm');
 confirmPassword.disabled = true;
 
+const createAccount = document.querySelector('button');
+
 const minCharacter = document.getElementById('min-char');
 const oneLetter = document.getElementById('one-letter');
 const oneNumber = document.getElementById('one-number');
@@ -46,6 +48,23 @@ password.addEventListener('input', () => {
         confirmPassword.value = "";
         confirmPassword.className = "";
     }
+})
+
+confirmPassword.addEventListener('input', () => {
+    confirmPassword.className = "";
+    if(confirmPassword.value === password.value) {
+        confirmPassword.classList.add('valid');
+    } else {
+        confirmPassword.classList.add('invalid');
+    }
+})
+
+createAccount.addEventListener('click', () => {
+    inputs.forEach(input => {
+       if(input.value == "" && input.required) {
+        input.classList.add('invalid');
+       } 
+    })
 })
 
 
