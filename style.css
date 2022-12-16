@@ -1,7 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
 * {
@@ -13,20 +10,50 @@
 body {
     font-family: 'Fira Sans';
     display: flex;
+    background-color: #8042420c;
 }
 
-.left-container {
+.fixed-container {
     width: 40vw;
+    height: 100vh;
     min-width: 300px;
     background-image: url(/images/signup-background.jpg);
     background-repeat: no-repeat;
     background-size: 800px;
     background-position: center;
+    position: fixed;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.521);
+    margin-top: 146px;
+}
+
+.banner img {
+    height: 150px;
+    margin-left: 30px;
+}
+
+.banner h1 {
+    color: white;
+    font-family: 'Amatic SC';
+    font-size: 3.3em;
+    margin-left: 50px;
+    letter-spacing: .3em;
+}
+
+.left-container {
+    width: 40vw;
+    min-width: 300px;
 }
 
 .right-container {
-    background-color: #8042420c;
-    height: 100vh;
+    /* background-color: #8042420c;
+    height: 100vh; */
     width: 60vw;
 }
 
@@ -52,7 +79,7 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 650px;
+    max-width: 650px;
 }
 
 .form-input {
