@@ -52,7 +52,10 @@ password.addEventListener('input', () => {
 
 confirmPassword.addEventListener('input', () => {
     confirmPassword.className = "";
-    if(confirmPassword.value === password.value) {
+    if(confirmPassword.value == "") {
+        return;
+    }
+    else if(confirmPassword.value === password.value) {
         confirmPassword.classList.add('valid');
     } else {
         confirmPassword.classList.add('invalid');
@@ -65,8 +68,12 @@ createAccount.addEventListener('click', () => {
         input.classList.add('invalid');
        } 
     })
+    if(confirmPassword.value !== password.value) {
+        confirmPassword.setCustomValidity('Password does not match!');
+    } else {
+        confirmPassword.setCustomValidity("");
+    }
 })
-
 
 function letterCheck(userPassword) {
     if(userPassword.value == "") {

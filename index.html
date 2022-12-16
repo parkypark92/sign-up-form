@@ -35,18 +35,18 @@
                         </div>
                         <div class="form-input">
                             <label for="tel">TELEPHONE (OPTIONAL)</label>
-                            <input type="tel" name="tel" id="tel"><span></span>
+                            <input type="tel" name="tel" id="tel" maxlength="10" pattern="^[\d]{10}" title="Please enter a 10 digit number"><span></span>
                         </div>
                         <div class="form-input">
                             <label for="password">PASSWORD</label>
-                            <input type="password" name="password" id="password" pattern="^(?=.*[A-Za-z])(?=.*\d)[\W\w\s]{8,}$" title="enter valid password" required><span></span>
+                            <input type="password" name="password" id="password" pattern="^(?=.*[A-Za-z])(?=.*\d)[\W\w\s]{8,}$" title="enter valid password" maxlength="15" required><span></span>
                             <div id="min-char">Minimum 8 characters</div>
                             <div id="one-letter">At least one letter</div>
                             <div id="one-number">At least one number</div>
                         </div>
                         <div class="form-input">
                             <label for="password-confirm">CONFIRM PASSWORD</label>
-                            <input type="password" name="password-confirm" id="password-confirm" required><span></span>
+                            <input type="password" name="password-confirm" id="password-confirm" maxlength="15" required><span></span>
                         </div>
                     </div>
                 </div>
