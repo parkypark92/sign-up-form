@@ -6,6 +6,7 @@
     padding: 0px;
     box-sizing: border-box;
     --green-color: rgb(58, 131, 56);
+    --black-color: rgb(83, 83, 83);
 }
 body {
     font-family: 'Fira Sans';
@@ -14,6 +15,9 @@ body {
 }
 
 .fixed-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 40vw;
     height: 100vh;
     min-width: 300px;
@@ -46,14 +50,22 @@ body {
     letter-spacing: .3em;
 }
 
+.fixed-container p {
+    color: rgb(233, 233, 233);
+    width: 235px;
+    margin: 10px auto;
+}
+
+.fixed-container a {
+    color: rgb(233, 233, 233);
+}
+
 .left-container {
     width: 40vw;
     min-width: 300px;
 }
 
 .right-container {
-    /* background-color: #8042420c;
-    height: 100vh; */
     width: 60vw;
 }
 
@@ -61,11 +73,11 @@ body {
     margin: 150px 50px 50px 50px;
     max-width: 650px;
     font-weight: 400;
-    color: var(--green-color);
+    color: var(--black-color)
 }
 
 .white-background {
-    color: rgb(151, 91, 91);
+    color: rgb(145, 78, 78);
     background-color: rgb(255, 255, 255);
     padding: 25px 50px 0px 50px;
     box-shadow: 0px 5px 5px rgb(218, 218, 218);
@@ -113,11 +125,12 @@ button {
     box-shadow: 0px 0px 4px rgb(104, 104, 104);
 }
 
-p {
+.account {
     margin-left: 50px;
+    margin-bottom: 50px;
 }
 
-a {
+.login {
     margin-left: 5px;
     color: var(--green-color);
 }
@@ -131,7 +144,7 @@ span {
 }
 
 .valid {
-    border: 3px solid #328b2f;
+    border: 3px solid var(--green-color);
 }
 
 .valid + span::after {
