@@ -125,6 +125,11 @@ button {
     box-shadow: 0px 0px 4px rgb(104, 104, 104);
 }
 
+button:hover {
+    cursor: pointer;
+    background-color: #2a9126;
+}
+
 .account {
     margin-left: 50px;
     margin-bottom: 50px;

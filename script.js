@@ -1,3 +1,5 @@
+//Variable Declarations
+
 const firstName = document.getElementById('first-name');
 const lastName = document.getElementById('last-name');
 const email = document.getElementById('email');
@@ -17,6 +19,9 @@ let inputs = [firstName, lastName, email, telephone, password, confirmPassword];
 
 let passCheck = [minCharacter, oneLetter, oneNumber];
 
+
+//Events for all inputs
+
 inputs.forEach(input => {
   input.addEventListener('input', () => {
     input.className="";
@@ -30,6 +35,9 @@ inputs.forEach(input => {
     }
 })  
 });
+
+
+//Events for password and password confirmation
 
 password.addEventListener('input', () => {
     passCheck.forEach(check => {
@@ -62,6 +70,9 @@ confirmPassword.addEventListener('input', () => {
     }
 })
 
+
+//Event for create account button
+
 createAccount.addEventListener('click', () => {
     inputs.forEach(input => {
        if(input.value == "" && input.required) {
@@ -74,6 +85,22 @@ createAccount.addEventListener('click', () => {
         confirmPassword.setCustomValidity("");
     }
 })
+
+
+//Functions
+
+function minimumCharacterCheck(userPassword) {
+    if(userPassword.value == "") {
+        return;
+    }
+    else if(/.{8,}/.test(userPassword.value)) {
+        minCharacter.classList.add('pass-check-green');
+    }
+    else {
+        minCharacter.classList.add('pass-check-red');
+    }
+}
+
 
 function letterCheck(userPassword) {
     if(userPassword.value == "") {
@@ -101,14 +128,3 @@ function numberCheck(userPassword) {
 }
 
 
-function minimumCharacterCheck(userPassword) {
-    if(userPassword.value == "") {
-        return;
-    }
-    else if(/.{8,}/.test(userPassword.value)) {
-        minCharacter.classList.add('pass-check-green');
-    }
-    else {
-        minCharacter.classList.add('pass-check-red');
-    }
-}
